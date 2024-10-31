@@ -1,4 +1,4 @@
-package zzzlog
+package tuxlog
 
 var (
 	orderedLevels = []Level{

@@ -1,19 +1,19 @@
-// Package zzzlog provides a minimalistic level logging library based on
-// the zzzlogi level logging interface.
-package zzzlog
+// Package tuxlog provides a minimalistic level logging library based on
+// the tuxlogi level logging interface.
+package tuxlog
 
 import (
 	"io"
 	"os"
 
-	"github.com/tuxdude/zzzlogi"
+	"github.com/tuxgal/tuxlogi"
 )
 
 const (
 	defaultTimestampFormat = "2006-01-02T15:04:05.000Z0700"
 )
 
-// Logging levels used by the zzzlog logger.
+// Logging levels used by the tuxlog logger.
 const (
 	// LvlFatal represents the Fatal log level.
 	LvlFatal Level = iota
@@ -29,7 +29,7 @@ const (
 	LvlTrace
 )
 
-// Level represents the logging level used by the zzzlog logger.
+// Level represents the logging level used by the tuxlog logger.
 type Level uint8
 
 func (l Level) String() string {
@@ -57,7 +57,7 @@ type Config struct {
 }
 
 // NewLogger instantiates a Logger.
-func NewLogger(userConfig *Config) zzzlogi.Logger {
+func NewLogger(userConfig *Config) tuxlogi.Logger {
 	c := defaultLoggingConfig()
 	c.dest = userConfig.Dest
 	c.maxLevel = userConfig.MaxLevel

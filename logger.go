@@ -1,4 +1,4 @@
-package zzzlog
+package tuxlog
 
 import (
 	"fmt"
@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tuxdude/zzzlogi"
+	"github.com/tuxgal/tuxlogi"
 )
 
 // loggerImpl is the implementation of the level logger based on
-// zzzlogi.Logger interface.
+// tuxlogi.Logger interface.
 type loggerImpl struct {
 	// config contains the logger configuration.
 	config *configInternal
@@ -43,7 +43,7 @@ type configInternal struct {
 }
 
 // newLoggerForConfig builds a logger based on the specified config.
-func newLoggerForConfig(config *configInternal) zzzlogi.Logger {
+func newLoggerForConfig(config *configInternal) tuxlogi.Logger {
 	logger := &loggerImpl{
 		config:   config,
 		levelStr: buildColoredLevels(config.levelColors),

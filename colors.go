@@ -1,4 +1,4 @@
-package zzzlog
+package tuxlog
 
 import (
 	"fmt"

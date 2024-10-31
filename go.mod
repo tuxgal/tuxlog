@@ -1,5 +1,5 @@
-module github.com/tuxdude/zzzlog
+module github.com/tuxgal/tuxlog
 
 go 1.17
 
-require github.com/tuxdude/zzzlogi v0.2.0
+require github.com/tuxgal/tuxlogi v0.3.0
