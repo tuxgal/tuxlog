@@ -175,5 +175,6 @@ func (l *loggerImpl) logEmpty(lvl Level) {
 }
 
 func (l *loggerImpl) write(format string, args ...interface{}) {
+	//nolint:errcheck
 	fmt.Fprintf(l.config.dest, format, args...)
 }
