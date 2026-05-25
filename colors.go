@@ -88,7 +88,7 @@ func coloredText(text string, format *levelColorInfo) string {
 		if !firstOption {
 			result.WriteString(optionSeperator)
 		}
-		result.WriteString(fmt.Sprintf("%d", format.color))
+		fmt.Fprintf(&result, "%d", format.color)
 	}
 	result.WriteString(formatSuffix)
 	result.WriteString(text)
